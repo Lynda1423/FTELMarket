@@ -20,7 +20,7 @@ public class ProductConfiguration : IEntityTypeConfiguration<Product>
         builder.Property(p => p.Price)
             .HasPrecision(18, 2);
 
-        // Relation 1-à-plusieurs (One-To-Many) montrée dans la notice (page 3)[cite: 3, 22]
+        // Relation 1-à-plusieurs (One-To-Many)
         builder.HasOne(p => p.Category)
             .WithMany(c => c.Products)
             .HasForeignKey(p => p.CategoryId)

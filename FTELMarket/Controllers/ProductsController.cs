@@ -28,7 +28,7 @@ public class ProductsController : ControllerBase
                 name = p.Name,
                 description = p.Description,
                 price = p.Price,
-                stock = p.StockQuantity, // Mapper StockQuantity vers stock
+                stock = p.StockQuantity, 
                 categoryId = p.CategoryId,
                 createdAt = p.CreatedAt,
                 categoryName = p.Category != null ? p.Category.Name : null
@@ -44,7 +44,7 @@ public class ProductsController : ControllerBase
         public string Name { get; set; } = string.Empty;
         public string? Description { get; set; }
         public decimal Price { get; set; }
-        public int Stock { get; set; } // Reçoit "stock" du Front
+        public int Stock { get; set; } 
         public int CategoryId { get; set; }
     }
 
@@ -57,7 +57,7 @@ public class ProductsController : ControllerBase
             Name = dto.Name,
             Description = dto.Description,
             Price = dto.Price,
-            StockQuantity = dto.Stock, // Assigner dto.Stock à StockQuantity
+            StockQuantity = dto.Stock,
             CategoryId = dto.CategoryId,
             CreatedAt = DateTimeOffset.UtcNow
         };
@@ -91,7 +91,7 @@ public async Task<IActionResult> PutProduct(int id, [FromBody] CreateProductDto 
         return NotFound(new { message = $"Le jeu avec l'ID {id} n'a pas été trouvé." });
     }
 
-    // Vérifier si la catégorie existe
+    
     var categoryExists = await _context.Categories.AnyAsync(c => c.Id == dto.CategoryId);
     if (!categoryExists)
     {

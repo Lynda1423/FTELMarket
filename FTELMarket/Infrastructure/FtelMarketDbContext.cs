@@ -9,7 +9,7 @@ public class FtelMarketDbContext : DbContext
     {
     }
 
-    // Déclaration des tables en base de données
+    
     public DbSet<Product> Products => Set<Product>();
     public DbSet<Category> Categories => Set<Category>();
 
@@ -17,7 +17,7 @@ public class FtelMarketDbContext : DbContext
     {
         base.OnModelCreating(modelBuilder);
         
-        // Charge automatiquement toutes les configurations du dossier Configurations
+        
         modelBuilder.ApplyConfigurationsFromAssembly(typeof(FtelMarketDbContext).Assembly);
     }
 }
