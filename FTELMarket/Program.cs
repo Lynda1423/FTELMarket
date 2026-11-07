@@ -1,3 +1,4 @@
+
 namespace FTELMarket;
 
 using FTELMarket.Infrastructure;
@@ -5,6 +6,7 @@ using Microsoft.EntityFrameworkCore;
 using FTELMarket.Settings;
 using FTELMarket.Services;
 using Microsoft.Extensions.Options;
+using Swashbuckle.AspNetCore.SwaggerGen;
 public class Program
 {
     public static void Main(string[] args)
@@ -52,7 +54,20 @@ public class Program
             var settings = sp.GetRequiredService<IOptions<FlakySettings>>().Value;
             client.BaseAddress = new Uri(settings.BaseAddress);
         });
+        
+        
+        builder.Services.AddOpenApi();
+        builder.Services.AddEndpointsApiExplorer(); 
+        builder.Services.AddSwaggerGen();           
+
         var app = builder.Build();
+
+        if (app.Environment.IsDevelopment())
+        {
+            app.MapOpenApi();
+            app.UseSwagger();   
+            app.UseSwaggerUI();
+}
 
         if (app.Environment.IsDevelopment())
         {

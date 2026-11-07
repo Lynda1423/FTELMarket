@@ -1,0 +1,1153 @@
+2026-11-07 16:07:49.596 +01:00 [INF] Démarrage de FTELMarket Web API...
+2026-11-07 16:07:51.252 +01:00 [INF] Now listening on: http://localhost:5082
+2026-11-07 16:07:51.268 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-11-07 16:07:51.271 +01:00 [INF] Hosting environment: Development
+2026-11-07 16:07:51.274 +01:00 [INF] Content root path: D:\M2 GIL\.Net\FTELMarket\FTELMarket
+2026-11-07 16:08:11.131 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5082/swagger/index.html - null null
+2026-11-07 16:08:11.523 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5082/swagger/index.html - 304 null null 398.0129ms
+2026-11-07 16:08:11.527 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5082/api/products?page=1&pageSize=10 - null null
+2026-11-07 16:08:11.527 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5082/api/categories - null null
+2026-11-07 16:08:11.556 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5082/swagger/index.css - null null
+2026-11-07 16:08:11.569 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5082/swagger/swagger-ui-bundle.js - null null
+2026-11-07 16:08:11.584 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5082/swagger/swagger-ui.css - null null
+2026-11-07 16:08:11.628 +01:00 [INF] CORS policy execution successful.
+2026-11-07 16:08:11.646 +01:00 [INF] CORS policy execution successful.
+2026-11-07 16:08:11.687 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5082/swagger/index.css - 304 null null 129.8732ms
+2026-11-07 16:08:11.796 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5082/swagger/swagger-ui-bundle.js - 304 null null 227.4499ms
+2026-11-07 16:08:11.929 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5082/swagger/swagger-ui.css - 304 null null 344.595ms
+2026-11-07 16:08:11.946 +01:00 [INF] Executing endpoint 'FTELMarket.Controllers.ProductsController.GetProducts (FTELMarket)'
+2026-11-07 16:08:11.946 +01:00 [INF] Executing endpoint 'FTELMarket.Controllers.CategoriesController.GetCategories (FTELMarket)'
+2026-11-07 16:08:11.956 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5082/swagger/swagger-ui-standalone-preset.js - null null
+2026-11-07 16:08:11.973 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5082/swagger/index.js - null null
+2026-11-07 16:08:12.034 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5082/swagger/swagger-ui-standalone-preset.js - 304 null null 77.0138ms
+2026-11-07 16:08:12.054 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5082/swagger/index.js - 304 null null 80.7291ms
+2026-11-07 16:08:12.074 +01:00 [INF] Route matched with {action = "GetCategories", controller = "Categories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCategories() on controller FTELMarket.Controllers.CategoriesController (FTELMarket).
+2026-11-07 16:08:12.075 +01:00 [INF] Route matched with {action = "GetProducts", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetProducts() on controller FTELMarket.Controllers.ProductsController (FTELMarket).
+2026-11-07 16:08:12.269 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5082/swagger/v1/swagger.json - null null
+2026-11-07 16:08:12.413 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5082/swagger/favicon-32x32.png - null null
+2026-11-07 16:08:12.436 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5082/swagger/favicon-32x32.png - 304 null null 21.952ms
+2026-11-07 16:08:12.772 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5082/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 502.1307ms
+2026-11-07 16:08:15.869 +01:00 [INF] Executed DbCommand (66ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id" AS id, p."Name" AS name, p."Description" AS description, p."Price" AS price, p."StockQuantity" AS stock, p."CategoryId" AS "categoryId", p."CreatedAt" AS "createdAt", c."Name" AS "categoryName"
+FROM "Products" AS p
+INNER JOIN "Categories" AS c ON p."CategoryId" = c."Id"
+2026-11-07 16:08:15.869 +01:00 [INF] Executed DbCommand (66ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT c."Id" AS id, c."Name" AS name
+FROM "Categories" AS c
+2026-11-07 16:08:15.965 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[<>f__AnonymousType1`8[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Decimal, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.DateTimeOffset, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], FTELMarket, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-11-07 16:08:16.032 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[<>f__AnonymousType0`2[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], FTELMarket, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-11-07 16:08:16.048 +01:00 [INF] Executed action FTELMarket.Controllers.ProductsController.GetProducts (FTELMarket) in 3896.5921ms
+2026-11-07 16:08:16.048 +01:00 [INF] Executed action FTELMarket.Controllers.CategoriesController.GetCategories (FTELMarket) in 3910.376ms
+2026-11-07 16:08:16.055 +01:00 [INF] Executed endpoint 'FTELMarket.Controllers.ProductsController.GetProducts (FTELMarket)'
+2026-11-07 16:08:16.058 +01:00 [INF] Executed endpoint 'FTELMarket.Controllers.CategoriesController.GetCategories (FTELMarket)'
+2026-11-07 16:08:16.091 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5082/api/products?page=1&pageSize=10 - 200 null application/json; charset=utf-8 4565.7247ms
+2026-11-07 16:08:16.091 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5082/api/categories - 200 null application/json; charset=utf-8 4565.7183ms
+2026-11-07 16:08:22.467 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5082/api/Products/sync/customers - null 0
+2026-11-07 16:08:22.481 +01:00 [INF] CORS policy execution failed.
+2026-11-07 16:08:22.486 +01:00 [INF] Request origin http://localhost:5082 does not have permission to access the resource.
+2026-11-07 16:08:22.493 +01:00 [INF] Executing endpoint 'FTELMarket.Controllers.ProductsController.SyncCustomers (FTELMarket)'
+2026-11-07 16:08:22.518 +01:00 [INF] Route matched with {action = "SyncCustomers", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SyncCustomers() on controller FTELMarket.Controllers.ProductsController (FTELMarket).
+2026-11-07 16:08:22.653 +01:00 [INF] Début de la synchronisation des clients...
+2026-11-07 16:08:22.661 +01:00 [INF] Start processing HTTP request GET http://localhost:8080/api/customers
+2026-11-07 16:08:24.092 +01:00 [INF] Sending HTTP request GET http://localhost:8080/api/customers
+2026-11-07 16:08:24.311 +01:00 [INF] Received HTTP response headers after 207.6363ms - 504
+2026-11-07 16:08:24.357 +01:00 [WRN] Execution attempt. Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '504', Handled: 'true', Attempt: '0', Execution Time: 276.2973ms
+2026-11-07 16:08:24.398 +01:00 [WRN] Resilience event occurred. EventName: 'OnRetry', Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '504'
+2026-11-07 16:08:26.193 +01:00 [INF] Sending HTTP request GET http://localhost:8080/api/customers
+2026-11-07 16:08:26.289 +01:00 [INF] Received HTTP response headers after 90.7818ms - 200
+2026-11-07 16:08:26.294 +01:00 [INF] Execution attempt. Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '200', Handled: 'false', Attempt: '1', Execution Time: 101.0413ms
+2026-11-07 16:08:26.327 +01:00 [INF] End processing HTTP request after 3667.4955ms - 200
+2026-11-07 16:08:26.376 +01:00 [INF] Executed action FTELMarket.Controllers.ProductsController.SyncCustomers (FTELMarket) in 3848.5511ms
+2026-11-07 16:08:26.380 +01:00 [INF] Executed endpoint 'FTELMarket.Controllers.ProductsController.SyncCustomers (FTELMarket)'
+2026-11-07 16:08:26.385 +01:00 [ERR] An unhandled exception has occurred while executing the request.
+System.Text.Json.JsonException: The JSON value could not be converted to System.Collections.Generic.List`1[FTELMarket.Models.ExternalCustomerDto]. Path: $ | LineNumber: 0 | BytePositionInLine: 1.
+   at System.Text.Json.ThrowHelper.ThrowJsonException_DeserializeUnableToConvertValue(Type propertyType)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, TCollection& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value, Boolean& isPopulatedValue)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, T& value, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.ContinueDeserialize[TReadBufferState,TStream](TReadBufferState& bufferState, JsonReaderState& jsonReaderState, ReadStack& readStack, T& value)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.DeserializeAsync[TReadBufferState,TStream](TStream utf8Json, TReadBufferState bufferState, CancellationToken cancellationToken)
+   at System.Net.Http.Json.HttpContentJsonExtensions.ReadFromJsonAsyncCore[T](HttpContent content, JsonSerializerOptions options, CancellationToken cancellationToken)
+   at FTELMarket.Services.FlakyService.SyncCustomersAsync(CancellationToken cancellationToken) in D:\M2 GIL\.Net\FTELMarket\FTELMarket\Services\FlakyService.cs:line 29
+   at FTELMarket.Controllers.ProductsController.SyncCustomers() in D:\M2 GIL\.Net\FTELMarket\FTELMarket\Controllers\ProductsController.cs:line 141
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2026-11-07 16:08:26.461 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5082/api/Products/sync/customers - 500 null text/plain; charset=utf-8 3994.672ms
+2026-11-07 16:09:39.213 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5082/api/categories - null null
+2026-11-07 16:09:39.213 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5082/api/products?page=1&pageSize=10 - null null
+2026-11-07 16:09:39.263 +01:00 [INF] CORS policy execution successful.
+2026-11-07 16:09:39.273 +01:00 [INF] CORS policy execution successful.
+2026-11-07 16:09:39.283 +01:00 [INF] Executing endpoint 'FTELMarket.Controllers.CategoriesController.GetCategories (FTELMarket)'
+2026-11-07 16:09:39.287 +01:00 [INF] Executing endpoint 'FTELMarket.Controllers.ProductsController.GetProducts (FTELMarket)'
+2026-11-07 16:09:39.295 +01:00 [INF] Route matched with {action = "GetCategories", controller = "Categories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCategories() on controller FTELMarket.Controllers.CategoriesController (FTELMarket).
+2026-11-07 16:09:39.303 +01:00 [INF] Route matched with {action = "GetProducts", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetProducts() on controller FTELMarket.Controllers.ProductsController (FTELMarket).
+2026-11-07 16:09:39.584 +01:00 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT c."Id" AS id, c."Name" AS name
+FROM "Categories" AS c
+2026-11-07 16:09:39.584 +01:00 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id" AS id, p."Name" AS name, p."Description" AS description, p."Price" AS price, p."StockQuantity" AS stock, p."CategoryId" AS "categoryId", p."CreatedAt" AS "createdAt", c."Name" AS "categoryName"
+FROM "Products" AS p
+INNER JOIN "Categories" AS c ON p."CategoryId" = c."Id"
+2026-11-07 16:09:39.592 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[<>f__AnonymousType0`2[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], FTELMarket, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-11-07 16:09:39.599 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[<>f__AnonymousType1`8[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Decimal, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.DateTimeOffset, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], FTELMarket, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-11-07 16:09:39.603 +01:00 [INF] Executed action FTELMarket.Controllers.CategoriesController.GetCategories (FTELMarket) in 280.8325ms
+2026-11-07 16:09:39.612 +01:00 [INF] Executed action FTELMarket.Controllers.ProductsController.GetProducts (FTELMarket) in 240.2613ms
+2026-11-07 16:09:39.618 +01:00 [INF] Executed endpoint 'FTELMarket.Controllers.CategoriesController.GetCategories (FTELMarket)'
+2026-11-07 16:09:39.627 +01:00 [INF] Executed endpoint 'FTELMarket.Controllers.ProductsController.GetProducts (FTELMarket)'
+2026-11-07 16:09:39.632 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5082/api/categories - 200 null application/json; charset=utf-8 418.9348ms
+2026-11-07 16:09:39.637 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5082/api/products?page=1&pageSize=10 - 200 null application/json; charset=utf-8 423.4095ms
+2026-11-07 16:09:41.510 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5082/api/categories - null null
+2026-11-07 16:09:41.537 +01:00 [INF] CORS policy execution successful.
+2026-11-07 16:09:41.567 +01:00 [INF] Executing endpoint 'FTELMarket.Controllers.CategoriesController.GetCategories (FTELMarket)'
+2026-11-07 16:09:41.603 +01:00 [INF] Route matched with {action = "GetCategories", controller = "Categories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCategories() on controller FTELMarket.Controllers.CategoriesController (FTELMarket).
+2026-11-07 16:09:41.654 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT c."Id" AS id, c."Name" AS name
+FROM "Categories" AS c
+2026-11-07 16:09:41.703 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[<>f__AnonymousType0`2[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], FTELMarket, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-11-07 16:09:41.717 +01:00 [INF] Executed action FTELMarket.Controllers.CategoriesController.GetCategories (FTELMarket) in 70.3796ms
+2026-11-07 16:09:41.731 +01:00 [INF] Executed endpoint 'FTELMarket.Controllers.CategoriesController.GetCategories (FTELMarket)'
+2026-11-07 16:09:41.736 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5082/api/categories - 200 null application/json; charset=utf-8 226.2189ms
+2026-11-07 16:09:51.967 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5082/api/products - null null
+2026-11-07 16:09:51.990 +01:00 [INF] CORS policy execution successful.
+2026-11-07 16:09:52.003 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5082/api/products - 204 null null 35.7641ms
+2026-11-07 16:09:52.018 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5082/api/products - application/json 72
+2026-11-07 16:09:52.029 +01:00 [INF] CORS policy execution successful.
+2026-11-07 16:09:52.033 +01:00 [INF] Executing endpoint 'FTELMarket.Controllers.ProductsController.PostProduct (FTELMarket)'
+2026-11-07 16:09:52.089 +01:00 [INF] Route matched with {action = "PostProduct", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] PostProduct(CreateProductDto) on controller FTELMarket.Controllers.ProductsController (FTELMarket).
+2026-11-07 16:09:53.040 +01:00 [INF] Executed DbCommand (89ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = DateTime), @p2='?', @p3='?', @p4='?' (DbType = Decimal), @p5='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Products" ("CategoryId", "CreatedAt", "Description", "Name", "Price", "StockQuantity")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5)
+RETURNING "Id";
+2026-11-07 16:09:53.396 +01:00 [INF] Executed DbCommand (5ms) [Parameters=[@p='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT c."Id", c."Name"
+FROM "Categories" AS c
+WHERE c."Id" = @p
+LIMIT 1
+2026-11-07 16:09:53.538 +01:00 [INF] Executing CreatedAtActionResult, writing value of type '<>f__AnonymousType1`8[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Decimal, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.DateTimeOffset, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-11-07 16:09:53.718 +01:00 [INF] Executed action FTELMarket.Controllers.ProductsController.PostProduct (FTELMarket) in 1622.2368ms
+2026-11-07 16:09:53.724 +01:00 [INF] Executed endpoint 'FTELMarket.Controllers.ProductsController.PostProduct (FTELMarket)'
+2026-11-07 16:09:53.728 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5082/api/products - 201 null application/json; charset=utf-8 1710.4835ms
+2026-11-07 16:09:53.774 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5082/api/products?page=1&pageSize=10 - null null
+2026-11-07 16:09:53.789 +01:00 [INF] CORS policy execution successful.
+2026-11-07 16:09:53.793 +01:00 [INF] Executing endpoint 'FTELMarket.Controllers.ProductsController.GetProducts (FTELMarket)'
+2026-11-07 16:09:53.800 +01:00 [INF] Route matched with {action = "GetProducts", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetProducts() on controller FTELMarket.Controllers.ProductsController (FTELMarket).
+2026-11-07 16:09:53.814 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id" AS id, p."Name" AS name, p."Description" AS description, p."Price" AS price, p."StockQuantity" AS stock, p."CategoryId" AS "categoryId", p."CreatedAt" AS "createdAt", c."Name" AS "categoryName"
+FROM "Products" AS p
+INNER JOIN "Categories" AS c ON p."CategoryId" = c."Id"
+2026-11-07 16:09:53.852 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[<>f__AnonymousType1`8[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Decimal, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.DateTimeOffset, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], FTELMarket, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-11-07 16:09:53.859 +01:00 [INF] Executed action FTELMarket.Controllers.ProductsController.GetProducts (FTELMarket) in 50.8272ms
+2026-11-07 16:09:53.866 +01:00 [INF] Executed endpoint 'FTELMarket.Controllers.ProductsController.GetProducts (FTELMarket)'
+2026-11-07 16:09:53.871 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5082/api/products?page=1&pageSize=10 - 200 null application/json; charset=utf-8 97.2189ms
+2026-11-07 16:09:55.510 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5082/api/categories - null null
+2026-11-07 16:09:55.591 +01:00 [INF] CORS policy execution successful.
+2026-11-07 16:09:55.610 +01:00 [INF] Executing endpoint 'FTELMarket.Controllers.CategoriesController.GetCategories (FTELMarket)'
+2026-11-07 16:09:55.637 +01:00 [INF] Route matched with {action = "GetCategories", controller = "Categories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCategories() on controller FTELMarket.Controllers.CategoriesController (FTELMarket).
+2026-11-07 16:09:55.676 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT c."Id" AS id, c."Name" AS name
+FROM "Categories" AS c
+2026-11-07 16:09:55.691 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[<>f__AnonymousType0`2[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], FTELMarket, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-11-07 16:09:55.704 +01:00 [INF] Executed action FTELMarket.Controllers.CategoriesController.GetCategories (FTELMarket) in 34.3219ms
+2026-11-07 16:09:55.715 +01:00 [INF] Executed endpoint 'FTELMarket.Controllers.CategoriesController.GetCategories (FTELMarket)'
+2026-11-07 16:09:55.719 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5082/api/categories - 200 null application/json; charset=utf-8 209.2374ms
+2026-11-07 16:09:58.495 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5082/api/products/6 - null null
+2026-11-07 16:09:58.516 +01:00 [INF] CORS policy execution successful.
+2026-11-07 16:09:58.522 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5082/api/products/6 - 204 null null 26.1514ms
+2026-11-07 16:09:58.539 +01:00 [INF] Request starting HTTP/1.1 PUT http://localhost:5082/api/products/6 - application/json 74
+2026-11-07 16:09:58.553 +01:00 [INF] CORS policy execution successful.
+2026-11-07 16:09:58.557 +01:00 [INF] Executing endpoint 'FTELMarket.Controllers.ProductsController.PutProduct (FTELMarket)'
+2026-11-07 16:09:58.599 +01:00 [INF] Route matched with {action = "PutProduct", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] PutProduct(Int32, CreateProductDto) on controller FTELMarket.Controllers.ProductsController (FTELMarket).
+2026-11-07 16:09:58.667 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[@p='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CategoryId", p."CreatedAt", p."Description", p."Name", p."Price", p."StockQuantity"
+FROM "Products" AS p
+WHERE p."Id" = @p
+LIMIT 1
+2026-11-07 16:09:58.740 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[@dto_CategoryId='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Categories" AS c
+    WHERE c."Id" = @dto_CategoryId)
+2026-11-07 16:09:58.801 +01:00 [INF] Executed DbCommand (15ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (DbType = Decimal)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Products" SET "Price" = @p0
+WHERE "Id" = @p1;
+2026-11-07 16:09:58.824 +01:00 [INF] Executing StatusCodeResult, setting HTTP status code 204
+2026-11-07 16:09:58.834 +01:00 [INF] Executed action FTELMarket.Controllers.ProductsController.PutProduct (FTELMarket) in 227.8419ms
+2026-11-07 16:09:58.839 +01:00 [INF] Executed endpoint 'FTELMarket.Controllers.ProductsController.PutProduct (FTELMarket)'
+2026-11-07 16:09:58.849 +01:00 [INF] Request finished HTTP/1.1 PUT http://localhost:5082/api/products/6 - 204 null null 309.1368ms
+2026-11-07 16:09:58.870 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5082/api/products?page=1&pageSize=10 - null null
+2026-11-07 16:09:58.885 +01:00 [INF] CORS policy execution successful.
+2026-11-07 16:09:58.889 +01:00 [INF] Executing endpoint 'FTELMarket.Controllers.ProductsController.GetProducts (FTELMarket)'
+2026-11-07 16:09:58.893 +01:00 [INF] Route matched with {action = "GetProducts", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetProducts() on controller FTELMarket.Controllers.ProductsController (FTELMarket).
+2026-11-07 16:09:58.916 +01:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id" AS id, p."Name" AS name, p."Description" AS description, p."Price" AS price, p."StockQuantity" AS stock, p."CategoryId" AS "categoryId", p."CreatedAt" AS "createdAt", c."Name" AS "categoryName"
+FROM "Products" AS p
+INNER JOIN "Categories" AS c ON p."CategoryId" = c."Id"
+2026-11-07 16:09:58.927 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[<>f__AnonymousType1`8[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Decimal, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.DateTimeOffset, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], FTELMarket, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-11-07 16:09:58.934 +01:00 [INF] Executed action FTELMarket.Controllers.ProductsController.GetProducts (FTELMarket) in 28.7333ms
+2026-11-07 16:09:58.940 +01:00 [INF] Executed endpoint 'FTELMarket.Controllers.ProductsController.GetProducts (FTELMarket)'
+2026-11-07 16:09:58.948 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5082/api/products?page=1&pageSize=10 - 200 null application/json; charset=utf-8 78.3605ms
+2026-11-07 16:10:01.780 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5082/api/products/6 - null null
+2026-11-07 16:10:01.791 +01:00 [INF] CORS policy execution successful.
+2026-11-07 16:10:01.795 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5082/api/products/6 - 204 null null 14.4729ms
+2026-11-07 16:10:01.831 +01:00 [INF] Request starting HTTP/1.1 DELETE http://localhost:5082/api/products/6 - null null
+2026-11-07 16:10:01.855 +01:00 [INF] CORS policy execution successful.
+2026-11-07 16:10:01.862 +01:00 [INF] Executing endpoint 'FTELMarket.Controllers.ProductsController.DeleteProduct (FTELMarket)'
+2026-11-07 16:10:01.899 +01:00 [INF] Route matched with {action = "DeleteProduct", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DeleteProduct(Int32) on controller FTELMarket.Controllers.ProductsController (FTELMarket).
+2026-11-07 16:10:01.920 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@p='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CategoryId", p."CreatedAt", p."Description", p."Name", p."Price", p."StockQuantity"
+FROM "Products" AS p
+WHERE p."Id" = @p
+LIMIT 1
+2026-11-07 16:10:01.954 +01:00 [INF] Executed DbCommand (6ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM "Products"
+WHERE "Id" = @p0;
+2026-11-07 16:10:01.969 +01:00 [INF] Executing StatusCodeResult, setting HTTP status code 204
+2026-11-07 16:10:01.973 +01:00 [INF] Executed action FTELMarket.Controllers.ProductsController.DeleteProduct (FTELMarket) in 62.0282ms
+2026-11-07 16:10:01.978 +01:00 [INF] Executed endpoint 'FTELMarket.Controllers.ProductsController.DeleteProduct (FTELMarket)'
+2026-11-07 16:10:01.982 +01:00 [INF] Request finished HTTP/1.1 DELETE http://localhost:5082/api/products/6 - 204 null null 150.3742ms
+2026-11-07 16:10:01.993 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5082/api/products?page=1&pageSize=10 - null null
+2026-11-07 16:10:02.002 +01:00 [INF] CORS policy execution successful.
+2026-11-07 16:10:02.004 +01:00 [INF] Executing endpoint 'FTELMarket.Controllers.ProductsController.GetProducts (FTELMarket)'
+2026-11-07 16:10:02.008 +01:00 [INF] Route matched with {action = "GetProducts", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetProducts() on controller FTELMarket.Controllers.ProductsController (FTELMarket).
+2026-11-07 16:10:02.018 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id" AS id, p."Name" AS name, p."Description" AS description, p."Price" AS price, p."StockQuantity" AS stock, p."CategoryId" AS "categoryId", p."CreatedAt" AS "createdAt", c."Name" AS "categoryName"
+FROM "Products" AS p
+INNER JOIN "Categories" AS c ON p."CategoryId" = c."Id"
+2026-11-07 16:10:02.028 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[<>f__AnonymousType1`8[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Decimal, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.DateTimeOffset, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], FTELMarket, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-11-07 16:10:02.033 +01:00 [INF] Executed action FTELMarket.Controllers.ProductsController.GetProducts (FTELMarket) in 19.3131ms
+2026-11-07 16:10:02.041 +01:00 [INF] Executed endpoint 'FTELMarket.Controllers.ProductsController.GetProducts (FTELMarket)'
+2026-11-07 16:10:02.045 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5082/api/products?page=1&pageSize=10 - 200 null application/json; charset=utf-8 51.9642ms
+2026-11-07 16:12:22.975 +01:00 [INF] Application is shutting down...
+2026-11-07 16:12:47.918 +01:00 [INF] Démarrage de FTELMarket Web API...
+2026-11-07 16:12:48.996 +01:00 [INF] Now listening on: http://localhost:5082
+2026-11-07 16:12:49.009 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-11-07 16:12:49.012 +01:00 [INF] Hosting environment: Development
+2026-11-07 16:12:49.015 +01:00 [INF] Content root path: D:\M2 GIL\.Net\FTELMarket\FTELMarket
+2026-11-07 16:12:53.665 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5082/swagger/index.html - null null
+2026-11-07 16:12:54.043 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5082/swagger/index.html - 304 null null 372.0694ms
+2026-11-07 16:12:54.082 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5082/swagger/index.css - null null
+2026-11-07 16:12:54.091 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5082/swagger/swagger-ui-standalone-preset.js - null null
+2026-11-07 16:12:54.091 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5082/swagger/swagger-ui-bundle.js - null null
+2026-11-07 16:12:54.103 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5082/swagger/index.js - null null
+2026-11-07 16:12:54.133 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5082/swagger/swagger-ui.css - null null
+2026-11-07 16:12:54.181 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5082/swagger/index.css - 304 null null 99.4704ms
+2026-11-07 16:12:54.189 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5082/swagger/swagger-ui-standalone-preset.js - 304 null null 98.7134ms
+2026-11-07 16:12:54.252 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5082/swagger/index.js - 304 null null 149.4905ms
+2026-11-07 16:12:54.265 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5082/swagger/swagger-ui-bundle.js - 304 null null 173.5285ms
+2026-11-07 16:12:54.275 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5082/swagger/swagger-ui.css - 304 null null 141.7844ms
+2026-11-07 16:12:54.495 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5082/swagger/favicon-32x32.png - null null
+2026-11-07 16:12:54.529 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5082/swagger/v1/swagger.json - null null
+2026-11-07 16:12:54.558 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5082/swagger/favicon-32x32.png - 304 null null 62.7266ms
+2026-11-07 16:12:54.985 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5082/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 456.3912ms
+2026-11-07 16:13:00.478 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5082/api/Products/sync/customers - null 0
+2026-11-07 16:13:00.518 +01:00 [INF] CORS policy execution failed.
+2026-11-07 16:13:00.522 +01:00 [INF] Request origin http://localhost:5082 does not have permission to access the resource.
+2026-11-07 16:13:00.543 +01:00 [INF] Executing endpoint 'FTELMarket.Controllers.ProductsController.SyncCustomers (FTELMarket)'
+2026-11-07 16:13:00.610 +01:00 [INF] Route matched with {action = "SyncCustomers", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SyncCustomers() on controller FTELMarket.Controllers.ProductsController (FTELMarket).
+2026-11-07 16:13:01.121 +01:00 [INF] Début de la synchronisation des clients...
+2026-11-07 16:13:01.135 +01:00 [INF] Start processing HTTP request GET http://localhost:8080/api/customers
+2026-11-07 16:13:01.250 +01:00 [INF] Sending HTTP request GET http://localhost:8080/api/customers
+2026-11-07 16:13:01.414 +01:00 [INF] Received HTTP response headers after 151.3012ms - 502
+2026-11-07 16:13:01.456 +01:00 [WRN] Execution attempt. Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '502', Handled: 'true', Attempt: '0', Execution Time: 219.9807ms
+2026-11-07 16:13:01.495 +01:00 [WRN] Resilience event occurred. EventName: 'OnRetry', Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '502'
+2026-11-07 16:13:01.939 +01:00 [INF] Sending HTTP request GET http://localhost:8080/api/customers
+2026-11-07 16:13:02.047 +01:00 [INF] Received HTTP response headers after 10.336ms - 200
+2026-11-07 16:13:02.052 +01:00 [INF] Execution attempt. Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '200', Handled: 'false', Attempt: '1', Execution Time: 113.4968ms
+2026-11-07 16:13:02.086 +01:00 [INF] End processing HTTP request after 956.8771ms - 200
+2026-11-07 16:13:02.103 +01:00 [INF] JSON reçu de l'API : {"page":1,"pageSize":50,"total":500,"items":[{"id":"74737563-6d6f-7245-ad30-000000000000","firstName":"Nathan","lastName":"Laurent","email":"nathan.laurent0@example.com","city":"Toulouse"},{"id":"74737563-6d6f-7245-ad31-000000000000","firstName":"Maxime","lastName":"Bernard","email":"maxime.bernard1@example.com","city":"Lyon"},{"id":"74737563-6d6f-7245-ad32-000000000000","firstName":"Sarah","lastName":"Laurent","email":"sarah.laurent2@example.com","city":"Montpellier"},{"id":"74737563-6d6f-7245-ad33-000000000000","firstName":"Nathan","lastName":"Laurent","email":"nathan.laurent3@example.com","city":"Lyon"},{"id":"74737563-6d6f-7245-ad34-000000000000","firstName":"Nathan","lastName":"Dubois","email":"nathan.dubois4@example.com","city":"Lille"},{"id":"74737563-6d6f-7245-ad35-000000000000","firstName":"Chloé","lastName":"Dubois","email":"chloé.dubois5@example.com","city":"Marseille"},{"id":"74737563-6d6f-7245-ad36-000000000000","firstName":"Hugo","lastName":"Simon","email":"hugo.simon6@example.com","city":"Rennes"},{"id":"74737563-6d6f-7245-ad37-000000000000","firstName":"Hugo","lastName":"Laurent","email":"hugo.laurent7@example.com","city":"Montpellier"},{"id":"74737563-6d6f-7245-ad38-000000000000","firstName":"Lucas","lastName":"Moreau","email":"lucas.moreau8@example.com","city":"Rennes"},{"id":"74737563-6d6f-7245-ad39-000000000000","firstName":"Lucas","lastName":"Moreau","email":"lucas.moreau9@example.com","city":"Strasbourg"},{"id":"74737563-6d6f-7245-ad31-300000000000","firstName":"Maxime","lastName":"Bernard","email":"maxime.bernard10@example.com","city":"Bordeaux"},{"id":"74737563-6d6f-7245-ad31-310000000000","firstName":"Théo","lastName":"Simon","email":"théo.simon11@example.com","city":"Strasbourg"},{"id":"74737563-6d6f-7245-ad31-320000000000","firstName":"Maxime","lastName":"Robert","email":"maxime.robert12@example.com","city":"Rennes"},{"id":"74737563-6d6f-7245-ad31-330000000000","firstName":"Emma","lastName":"Thomas","email":"emma.thomas13@example.com","city":"Montpellier"},{"id":"74737563-6d6f-7245-ad31-340000000000","firstName":"Manon","lastName":"Laurent","email":"manon.laurent14@example.com","city":"Lille"},{"id":"74737563-6d6f-7245-ad31-350000000000","firstName":"Maxime","lastName":"Simon","email":"maxime.simon15@example.com","city":"Nantes"},{"id":"74737563-6d6f-7245-ad31-360000000000","firstName":"Manon","lastName":"Dubois","email":"manon.dubois16@example.com","city":"Rennes"},{"id":"74737563-6d6f-7245-ad31-370000000000","firstName":"Antoine","lastName":"Simon","email":"antoine.simon17@example.com","city":"Montpellier"},{"id":"74737563-6d6f-7245-ad31-380000000000","firstName":"Théo","lastName":"Bernard","email":"théo.bernard18@example.com","city":"Marseille"},{"id":"74737563-6d6f-7245-ad31-390000000000","firstName":"Théo","lastName":"Durand","email":"théo.durand19@example.com","city":"Bordeaux"},{"id":"74737563-6d6f-7245-ad32-300000000000","firstName":"Emma","lastName":"Simon","email":"emma.simon20@example.com","city":"Bordeaux"},{"id":"74737563-6d6f-7245-ad32-310000000000","firstName":"Hugo","lastName":"Simon","email":"hugo.simon21@example.com","city":"Lyon"},{"id":"74737563-6d6f-7245-ad32-320000000000","firstName":"Lucas","lastName":"Leroy","email":"lucas.leroy22@example.com","city":"Toulouse"},{"id":"74737563-6d6f-7245-ad32-330000000000","firstName":"Maxime","lastName":"Garcia","email":"maxime.garcia23@example.com","city":"Toulouse"},{"id":"74737563-6d6f-7245-ad32-340000000000","firstName":"Nathan","lastName":"Martin","email":"nathan.martin24@example.com","city":"Montpellier"},{"id":"74737563-6d6f-7245-ad32-350000000000","firstName":"Manon","lastName":"Leroy","email":"manon.leroy25@example.com","city":"Montpellier"},{"id":"74737563-6d6f-7245-ad32-360000000000","firstName":"Chloé","lastName":"Petit","email":"chloé.petit26@example.com","city":"Rennes"},{"id":"74737563-6d6f-7245-ad32-370000000000","firstName":"Léa","lastName":"Robert","email":"léa.robert27@example.com","city":"Rennes"},{"id":"74737563-6d6f-7245-ad32-380000000000","firstName":"Maxime","lastName":"Leroy","email":"maxime.leroy28@example.com","city":"Strasbourg"},{"id":"74737563-6d6f-7245-ad32-390000000000","firstName":"Léa","lastName":"Martin","email":"léa.martin29@example.com","city":"Lille"},{"id":"74737563-6d6f-7245-ad33-300000000000","firstName":"Emma","lastName":"Laurent","email":"emma.laurent30@example.com","city":"Toulouse"},{"id":"74737563-6d6f-7245-ad33-310000000000","firstName":"Camille","lastName":"Martin","email":"camille.martin31@example.com","city":"Bordeaux"},{"id":"74737563-6d6f-7245-ad33-320000000000","firstName":"Sarah","lastName":"Robert","email":"sarah.robert32@example.com","city":"Paris"},{"id":"74737563-6d6f-7245-ad33-330000000000","firstName":"Hugo","lastName":"Durand","email":"hugo.durand33@example.com","city":"Paris"},{"id":"74737563-6d6f-7245-ad33-340000000000","firstName":"Manon","lastName":"Bernard","email":"manon.bernard34@example.com","city":"Paris"},{"id":"74737563-6d6f-7245-ad33-350000000000","firstName":"Chloé","lastName":"Durand","email":"chloé.durand35@example.com","city":"Lille"},{"id":"74737563-6d6f-7245-ad33-360000000000","firstName":"Maxime","lastName":"Martin","email":"maxime.martin36@example.com","city":"Lyon"},{"id":"74737563-6d6f-7245-ad33-370000000000","firstName":"Camille","lastName":"Dubois","email":"camille.dubois37@example.com","city":"Strasbourg"},{"id":"74737563-6d6f-7245-ad33-380000000000","firstName":"Chloé","lastName":"Simon","email":"chloé.simon38@example.com","city":"Lyon"},{"id":"74737563-6d6f-7245-ad33-390000000000","firstName":"Chloé","lastName":"Leroy","email":"chloé.leroy39@example.com","city":"Paris"},{"id":"74737563-6d6f-7245-ad34-300000000000","firstName":"Nathan","lastName":"Moreau","email":"nathan.moreau40@example.com","city":"Rennes"},{"id":"74737563-6d6f-7245-ad34-310000000000","firstName":"Théo","lastName":"Robert","email":"théo.robert41@example.com","city":"Toulouse"},{"id":"74737563-6d6f-7245-ad34-320000000000","firstName":"Antoine","lastName":"Petit","email":"antoine.petit42@example.com","city":"Paris"},{"id":"74737563-6d6f-7245-ad34-330000000000","firstName":"Antoine","lastName":"Simon","email":"antoine.simon43@example.com","city":"Lille"},{"id":"74737563-6d6f-7245-ad34-340000000000","firstName":"Sarah","lastName":"Thomas","email":"sarah.thomas44@example.com","city":"Toulouse"},{"id":"74737563-6d6f-7245-ad34-350000000000","firstName":"Manon","lastName":"Moreau","email":"manon.moreau45@example.com","city":"Strasbourg"},{"id":"74737563-6d6f-7245-ad34-360000000000","firstName":"Léa","lastName":"Martin","email":"léa.martin46@example.com","city":"Lyon"},{"id":"74737563-6d6f-7245-ad34-370000000000","firstName":"Maxime","lastName":"Simon","email":"maxime.simon47@example.com","city":"Marseille"},{"id":"74737563-6d6f-7245-ad34-380000000000","firstName":"Emma","lastName":"Bernard","email":"emma.bernard48@example.com","city":"Lyon"},{"id":"74737563-6d6f-7245-ad34-390000000000","firstName":"Manon","lastName":"Durand","email":"manon.durand49@example.com","city":"Rennes"}]}
+2026-11-07 16:13:02.186 +01:00 [INF] Executed action FTELMarket.Controllers.ProductsController.SyncCustomers (FTELMarket) in 1555.9044ms
+2026-11-07 16:13:02.191 +01:00 [INF] Executed endpoint 'FTELMarket.Controllers.ProductsController.SyncCustomers (FTELMarket)'
+2026-11-07 16:13:02.202 +01:00 [ERR] An unhandled exception has occurred while executing the request.
+System.Text.Json.JsonException: The JSON value could not be converted to System.Collections.Generic.List`1[FTELMarket.Models.ExternalCustomerDto]. Path: $ | LineNumber: 0 | BytePositionInLine: 1.
+   at System.Text.Json.ThrowHelper.ThrowJsonException_DeserializeUnableToConvertValue(Type propertyType)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, TCollection& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value, Boolean& isPopulatedValue)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, T& value, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.Deserialize(Utf8JsonReader& reader, ReadStack& state)
+   at System.Text.Json.JsonSerializer.ReadFromSpan[TValue](ReadOnlySpan`1 utf8Json, JsonTypeInfo`1 jsonTypeInfo, Nullable`1 actualByteCount)
+   at System.Text.Json.JsonSerializer.ReadFromSpan[TValue](ReadOnlySpan`1 json, JsonTypeInfo`1 jsonTypeInfo)
+   at System.Text.Json.JsonSerializer.Deserialize[TValue](String json, JsonSerializerOptions options)
+   at FTELMarket.Services.FlakyService.SyncCustomersAsync(CancellationToken cancellationToken) in D:\M2 GIL\.Net\FTELMarket\FTELMarket\Services\FlakyService.cs:line 40
+   at FTELMarket.Controllers.ProductsController.SyncCustomers() in D:\M2 GIL\.Net\FTELMarket\FTELMarket\Controllers\ProductsController.cs:line 141
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2026-11-07 16:13:02.280 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5082/api/Products/sync/customers - 500 null text/plain; charset=utf-8 1801.6375ms
+2026-11-07 16:13:16.201 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5082/api/Products/sync/products - null 0
+2026-11-07 16:13:16.214 +01:00 [INF] CORS policy execution failed.
+2026-11-07 16:13:16.217 +01:00 [INF] Request origin http://localhost:5082 does not have permission to access the resource.
+2026-11-07 16:13:16.223 +01:00 [INF] Executing endpoint 'FTELMarket.Controllers.ProductsController.SyncProducts (FTELMarket)'
+2026-11-07 16:13:16.255 +01:00 [INF] Route matched with {action = "SyncProducts", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SyncProducts() on controller FTELMarket.Controllers.ProductsController (FTELMarket).
+2026-11-07 16:13:16.305 +01:00 [INF] Début de la synchronisation des produits...
+2026-11-07 16:13:16.308 +01:00 [INF] Start processing HTTP request GET http://localhost:8080/api/products
+2026-11-07 16:13:16.312 +01:00 [INF] Sending HTTP request GET http://localhost:8080/api/products
+2026-11-07 16:13:16.351 +01:00 [INF] Received HTTP response headers after 32.9266ms - 200
+2026-11-07 16:13:16.355 +01:00 [INF] Execution attempt. Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '200', Handled: 'false', Attempt: '0', Execution Time: 43.1753ms
+2026-11-07 16:13:16.367 +01:00 [INF] End processing HTTP request after 59.0695ms - 200
+2026-11-07 16:13:16.398 +01:00 [INF] Executed action FTELMarket.Controllers.ProductsController.SyncProducts (FTELMarket) in 137.9256ms
+2026-11-07 16:13:16.404 +01:00 [INF] Executed endpoint 'FTELMarket.Controllers.ProductsController.SyncProducts (FTELMarket)'
+2026-11-07 16:13:16.408 +01:00 [ERR] An unhandled exception has occurred while executing the request.
+System.Text.Json.JsonException: The JSON value could not be converted to System.Collections.Generic.List`1[FTELMarket.Models.ExternalProductDto]. Path: $ | LineNumber: 0 | BytePositionInLine: 1.
+   at System.Text.Json.ThrowHelper.ThrowJsonException_DeserializeUnableToConvertValue(Type propertyType)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, TCollection& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value, Boolean& isPopulatedValue)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, T& value, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.ContinueDeserialize[TReadBufferState,TStream](TReadBufferState& bufferState, JsonReaderState& jsonReaderState, ReadStack& readStack, T& value)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.DeserializeAsync[TReadBufferState,TStream](TStream utf8Json, TReadBufferState bufferState, CancellationToken cancellationToken)
+   at System.Net.Http.Json.HttpContentJsonExtensions.ReadFromJsonAsyncCore[T](HttpContent content, JsonSerializerOptions options, CancellationToken cancellationToken)
+   at FTELMarket.Services.FlakyService.SyncProductsAsync(CancellationToken cancellationToken) in D:\M2 GIL\.Net\FTELMarket\FTELMarket\Services\FlakyService.cs:line 89
+   at FTELMarket.Controllers.ProductsController.SyncProducts() in D:\M2 GIL\.Net\FTELMarket\FTELMarket\Controllers\ProductsController.cs:line 149
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2026-11-07 16:13:16.434 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5082/api/Products/sync/products - 500 null text/plain; charset=utf-8 232.913ms
+2026-11-07 16:13:25.972 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5082/api/Products/sync/orders - null 0
+2026-11-07 16:13:25.986 +01:00 [INF] CORS policy execution failed.
+2026-11-07 16:13:25.989 +01:00 [INF] Request origin http://localhost:5082 does not have permission to access the resource.
+2026-11-07 16:13:25.993 +01:00 [INF] Executing endpoint 'FTELMarket.Controllers.ProductsController.SyncOrders (FTELMarket)'
+2026-11-07 16:13:26.020 +01:00 [INF] Route matched with {action = "SyncOrders", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SyncOrders() on controller FTELMarket.Controllers.ProductsController (FTELMarket).
+2026-11-07 16:13:26.046 +01:00 [INF] Début de la synchronisation des commandes...
+2026-11-07 16:13:26.049 +01:00 [INF] Start processing HTTP request GET http://localhost:8080/api/orders
+2026-11-07 16:13:26.053 +01:00 [INF] Sending HTTP request GET http://localhost:8080/api/orders
+2026-11-07 16:13:26.106 +01:00 [INF] Received HTTP response headers after 44.9523ms - 200
+2026-11-07 16:13:26.111 +01:00 [INF] Execution attempt. Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '200', Handled: 'false', Attempt: '0', Execution Time: 59.0248ms
+2026-11-07 16:13:26.120 +01:00 [INF] End processing HTTP request after 71.7295ms - 200
+2026-11-07 16:13:26.142 +01:00 [INF] Executed action FTELMarket.Controllers.ProductsController.SyncOrders (FTELMarket) in 112.6577ms
+2026-11-07 16:13:26.146 +01:00 [INF] Executed endpoint 'FTELMarket.Controllers.ProductsController.SyncOrders (FTELMarket)'
+2026-11-07 16:13:26.150 +01:00 [ERR] An unhandled exception has occurred while executing the request.
+System.Text.Json.JsonException: The JSON value could not be converted to System.Collections.Generic.List`1[FTELMarket.Models.ExternalOrderDto]. Path: $ | LineNumber: 0 | BytePositionInLine: 1.
+   at System.Text.Json.ThrowHelper.ThrowJsonException_DeserializeUnableToConvertValue(Type propertyType)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, TCollection& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value, Boolean& isPopulatedValue)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, T& value, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.ContinueDeserialize[TReadBufferState,TStream](TReadBufferState& bufferState, JsonReaderState& jsonReaderState, ReadStack& readStack, T& value)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.DeserializeAsync[TReadBufferState,TStream](TStream utf8Json, TReadBufferState bufferState, CancellationToken cancellationToken)
+   at System.Net.Http.Json.HttpContentJsonExtensions.ReadFromJsonAsyncCore[T](HttpContent content, JsonSerializerOptions options, CancellationToken cancellationToken)
+   at FTELMarket.Services.FlakyService.SyncOrdersAsync(CancellationToken cancellationToken) in D:\M2 GIL\.Net\FTELMarket\FTELMarket\Services\FlakyService.cs:line 131
+   at FTELMarket.Controllers.ProductsController.SyncOrders() in D:\M2 GIL\.Net\FTELMarket\FTELMarket\Controllers\ProductsController.cs:line 157
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2026-11-07 16:13:26.175 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5082/api/Products/sync/orders - 500 null text/plain; charset=utf-8 202.5046ms
+2026-11-07 16:15:20.052 +01:00 [INF] Application is shutting down...
+2026-11-07 16:15:47.899 +01:00 [INF] Démarrage de FTELMarket Web API...
+2026-11-07 16:15:48.868 +01:00 [INF] Now listening on: http://localhost:5082
+2026-11-07 16:15:48.880 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-11-07 16:15:48.884 +01:00 [INF] Hosting environment: Development
+2026-11-07 16:15:48.889 +01:00 [INF] Content root path: D:\M2 GIL\.Net\FTELMarket\FTELMarket
+2026-11-07 16:15:52.111 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5082/swagger/index.html - null null
+2026-11-07 16:15:52.465 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5082/swagger/index.html - 304 null null 359.4892ms
+2026-11-07 16:15:52.494 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5082/swagger/index.css - null null
+2026-11-07 16:15:52.499 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5082/swagger/swagger-ui-bundle.js - null null
+2026-11-07 16:15:52.499 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5082/swagger/swagger-ui-standalone-preset.js - null null
+2026-11-07 16:15:52.501 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5082/swagger/index.js - null null
+2026-11-07 16:15:52.535 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5082/swagger/swagger-ui.css - null null
+2026-11-07 16:15:52.594 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5082/swagger/index.css - 304 null null 102.6856ms
+2026-11-07 16:15:52.643 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5082/swagger/swagger-ui-standalone-preset.js - 304 null null 144.351ms
+2026-11-07 16:15:52.655 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5082/swagger/swagger-ui-bundle.js - 304 null null 155.7545ms
+2026-11-07 16:15:52.664 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5082/swagger/index.js - 304 null null 163.1664ms
+2026-11-07 16:15:52.703 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5082/swagger/swagger-ui.css - 304 null null 167.0219ms
+2026-11-07 16:15:53.230 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5082/swagger/v1/swagger.json - null null
+2026-11-07 16:15:53.307 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5082/swagger/favicon-32x32.png - null null
+2026-11-07 16:15:53.330 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5082/swagger/favicon-32x32.png - 304 null null 22.8509ms
+2026-11-07 16:15:53.676 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5082/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 446.3662ms
+2026-11-07 16:15:57.374 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5082/swagger/index.html - null null
+2026-11-07 16:15:57.390 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5082/swagger/index.html - 304 null null 16.7142ms
+2026-11-07 16:15:57.423 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5082/swagger/index.css - null null
+2026-11-07 16:15:57.424 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5082/swagger/swagger-ui-bundle.js - null null
+2026-11-07 16:15:57.424 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5082/swagger/swagger-ui-standalone-preset.js - null null
+2026-11-07 16:15:57.424 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5082/swagger/index.js - null null
+2026-11-07 16:15:57.445 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5082/swagger/swagger-ui.css - null null
+2026-11-07 16:15:57.465 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5082/swagger/index.css - 304 null null 42.0913ms
+2026-11-07 16:15:57.479 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5082/swagger/swagger-ui-bundle.js - 304 null null 54.4564ms
+2026-11-07 16:15:57.492 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5082/swagger/swagger-ui-standalone-preset.js - 304 null null 67.7078ms
+2026-11-07 16:15:57.508 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5082/swagger/index.js - 304 null null 83.824ms
+2026-11-07 16:15:57.524 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5082/swagger/swagger-ui.css - 304 null null 79.2961ms
+2026-11-07 16:15:57.780 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5082/swagger/v1/swagger.json - null null
+2026-11-07 16:15:57.795 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5082/swagger/favicon-32x32.png - null null
+2026-11-07 16:15:57.873 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5082/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 92.8745ms
+2026-11-07 16:15:57.890 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5082/swagger/favicon-32x32.png - 304 null null 95.1617ms
+2026-11-07 16:16:03.009 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5082/api/Products/sync/customers - null 0
+2026-11-07 16:16:03.033 +01:00 [INF] CORS policy execution failed.
+2026-11-07 16:16:03.039 +01:00 [INF] Request origin http://localhost:5082 does not have permission to access the resource.
+2026-11-07 16:16:03.055 +01:00 [INF] Executing endpoint 'FTELMarket.Controllers.ProductsController.SyncCustomers (FTELMarket)'
+2026-11-07 16:16:03.113 +01:00 [INF] Route matched with {action = "SyncCustomers", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SyncCustomers() on controller FTELMarket.Controllers.ProductsController (FTELMarket).
+2026-11-07 16:16:03.624 +01:00 [INF] Début de la synchronisation des clients...
+2026-11-07 16:16:03.635 +01:00 [INF] Start processing HTTP request GET http://localhost:5000/api/customers
+2026-11-07 16:16:03.807 +01:00 [INF] Sending HTTP request GET http://localhost:5000/api/customers
+2026-11-07 16:16:08.121 +01:00 [INF] HTTP request failed after 4277.8019ms
+System.Net.Http.HttpRequestException: Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée. (localhost:5000)
+ ---> System.Net.Sockets.SocketException (10061): Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.InjectNewHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.SocketsHttpHandler.<SendAsync>g__CreateHandlerAndSendAsync|115_0(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendCoreAsync>g__Core|4_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+2026-11-07 16:16:08.196 +01:00 [WRN] Execution attempt. Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: 'Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée. (localhost:5000)', Handled: 'true', Attempt: '0', Execution Time: 4416.5437ms
+System.Net.Http.HttpRequestException: Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée. (localhost:5000)
+ ---> System.Net.Sockets.SocketException (10061): Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.InjectNewHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.SocketsHttpHandler.<SendAsync>g__CreateHandlerAndSendAsync|115_0(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendCoreAsync>g__Core|4_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Resilience.ResilienceHandler.<>c.<<SendAsync>b__3_0>d.MoveNext()
+2026-11-07 16:16:08.246 +01:00 [WRN] Resilience event occurred. EventName: 'OnRetry', Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: 'Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée. (localhost:5000)'
+System.Net.Http.HttpRequestException: Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée. (localhost:5000)
+ ---> System.Net.Sockets.SocketException (10061): Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.InjectNewHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.SocketsHttpHandler.<SendAsync>g__CreateHandlerAndSendAsync|115_0(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendCoreAsync>g__Core|4_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Resilience.ResilienceHandler.<>c.<<SendAsync>b__3_0>d.MoveNext()
+2026-11-07 16:16:10.669 +01:00 [INF] Sending HTTP request GET http://localhost:5000/api/customers
+2026-11-07 16:16:14.762 +01:00 [INF] HTTP request failed after 4083.5228ms
+System.Net.Http.HttpRequestException: Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée. (localhost:5000)
+ ---> System.Net.Sockets.SocketException (10061): Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.InjectNewHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendCoreAsync>g__Core|4_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+2026-11-07 16:16:14.784 +01:00 [WRN] Execution attempt. Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: 'Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée. (localhost:5000)', Handled: 'true', Attempt: '1', Execution Time: 4114.9077ms
+System.Net.Http.HttpRequestException: Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée. (localhost:5000)
+ ---> System.Net.Sockets.SocketException (10061): Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.InjectNewHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendCoreAsync>g__Core|4_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Resilience.ResilienceHandler.<>c.<<SendAsync>b__3_0>d.MoveNext()
+2026-11-07 16:16:14.808 +01:00 [WRN] Resilience event occurred. EventName: 'OnRetry', Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: 'Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée. (localhost:5000)'
+System.Net.Http.HttpRequestException: Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée. (localhost:5000)
+ ---> System.Net.Sockets.SocketException (10061): Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.InjectNewHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendCoreAsync>g__Core|4_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Resilience.ResilienceHandler.<>c.<<SendAsync>b__3_0>d.MoveNext()
+2026-11-07 16:16:15.378 +01:00 [INF] Sending HTTP request GET http://localhost:5000/api/customers
+2026-11-07 16:16:19.446 +01:00 [INF] HTTP request failed after 4063.7948ms
+System.Net.Http.HttpRequestException: Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée. (localhost:5000)
+ ---> System.Net.Sockets.SocketException (10061): Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.InjectNewHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendCoreAsync>g__Core|4_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+2026-11-07 16:16:19.468 +01:00 [WRN] Execution attempt. Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: 'Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée. (localhost:5000)', Handled: 'true', Attempt: '2', Execution Time: 4090.7864ms
+System.Net.Http.HttpRequestException: Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée. (localhost:5000)
+ ---> System.Net.Sockets.SocketException (10061): Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.InjectNewHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendCoreAsync>g__Core|4_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Resilience.ResilienceHandler.<>c.<<SendAsync>b__3_0>d.MoveNext()
+2026-11-07 16:16:19.501 +01:00 [WRN] Resilience event occurred. EventName: 'OnRetry', Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: 'Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée. (localhost:5000)'
+System.Net.Http.HttpRequestException: Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée. (localhost:5000)
+ ---> System.Net.Sockets.SocketException (10061): Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.InjectNewHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendCoreAsync>g__Core|4_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Resilience.ResilienceHandler.<>c.<<SendAsync>b__3_0>d.MoveNext()
+2026-11-07 16:16:20.907 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5082/api/Products - null null
+2026-11-07 16:16:20.941 +01:00 [INF] Executing endpoint 'FTELMarket.Controllers.ProductsController.GetProducts (FTELMarket)'
+2026-11-07 16:16:20.968 +01:00 [INF] Route matched with {action = "GetProducts", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetProducts() on controller FTELMarket.Controllers.ProductsController (FTELMarket).
+2026-11-07 16:16:24.591 +01:00 [INF] Executed DbCommand (76ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id" AS id, p."Name" AS name, p."Description" AS description, p."Price" AS price, p."StockQuantity" AS stock, p."CategoryId" AS "categoryId", p."CreatedAt" AS "createdAt", c."Name" AS "categoryName"
+FROM "Products" AS p
+INNER JOIN "Categories" AS c ON p."CategoryId" = c."Id"
+2026-11-07 16:16:24.690 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[<>f__AnonymousType1`8[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Decimal, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.DateTimeOffset, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], FTELMarket, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-11-07 16:16:24.777 +01:00 [INF] Executed action FTELMarket.Controllers.ProductsController.GetProducts (FTELMarket) in 3789.1057ms
+2026-11-07 16:16:24.784 +01:00 [INF] Executed endpoint 'FTELMarket.Controllers.ProductsController.GetProducts (FTELMarket)'
+2026-11-07 16:16:24.823 +01:00 [INF] Sending HTTP request GET http://localhost:5000/api/customers
+2026-11-07 16:16:24.823 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5082/api/Products - 200 null application/json; charset=utf-8 3915.8012ms
+2026-11-07 16:16:28.906 +01:00 [INF] HTTP request failed after 4072.966ms
+System.Net.Http.HttpRequestException: Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée. (localhost:5000)
+ ---> System.Net.Sockets.SocketException (10061): Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.InjectNewHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendCoreAsync>g__Core|4_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+2026-11-07 16:16:28.919 +01:00 [ERR] Execution attempt. Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: 'Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée. (localhost:5000)', Handled: 'true', Attempt: '3', Execution Time: 4095.2726ms
+System.Net.Http.HttpRequestException: Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée. (localhost:5000)
+ ---> System.Net.Sockets.SocketException (10061): Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.InjectNewHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendCoreAsync>g__Core|4_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Resilience.ResilienceHandler.<>c.<<SendAsync>b__3_0>d.MoveNext()
+2026-11-07 16:16:28.957 +01:00 [INF] HTTP request failed after 25326.9599ms
+System.Net.Http.HttpRequestException: Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée. (localhost:5000)
+ ---> System.Net.Sockets.SocketException (10061): Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.InjectNewHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendCoreAsync>g__Core|4_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Resilience.ResilienceHandler.<>c.<<SendAsync>b__3_0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Polly.Outcome`1.ThrowIfException()
+   at Microsoft.Extensions.Http.Resilience.ResilienceHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingScopeHttpMessageHandler.<SendCoreAsync>g__Core|4_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+2026-11-07 16:16:28.978 +01:00 [INF] Executed action FTELMarket.Controllers.ProductsController.SyncCustomers (FTELMarket) in 25857.5967ms
+2026-11-07 16:16:28.982 +01:00 [INF] Executed endpoint 'FTELMarket.Controllers.ProductsController.SyncCustomers (FTELMarket)'
+2026-11-07 16:16:28.987 +01:00 [ERR] An unhandled exception has occurred while executing the request.
+System.Net.Http.HttpRequestException: Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée. (localhost:5000)
+ ---> System.Net.Sockets.SocketException (10061): Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.InjectNewHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendCoreAsync>g__Core|4_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Resilience.ResilienceHandler.<>c.<<SendAsync>b__3_0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Polly.Outcome`1.ThrowIfException()
+   at Microsoft.Extensions.Http.Resilience.ResilienceHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingScopeHttpMessageHandler.<SendCoreAsync>g__Core|4_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at FTELMarket.Services.FlakyService.SyncCustomersAsync(CancellationToken cancellationToken) in D:\M2 GIL\.Net\FTELMarket\FTELMarket\Services\FlakyService.cs:line 24
+   at FTELMarket.Controllers.ProductsController.SyncCustomers() in D:\M2 GIL\.Net\FTELMarket\FTELMarket\Controllers\ProductsController.cs:line 141
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2026-11-07 16:16:29.039 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5082/api/Products/sync/customers - 500 null text/plain; charset=utf-8 26029.8869ms
+2026-11-07 16:16:34.670 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5082/api/Products/sync/customers - null 0
+2026-11-07 16:16:34.688 +01:00 [INF] CORS policy execution failed.
+2026-11-07 16:16:34.693 +01:00 [INF] Request origin http://localhost:5082 does not have permission to access the resource.
+2026-11-07 16:16:34.707 +01:00 [INF] Executing endpoint 'FTELMarket.Controllers.ProductsController.SyncCustomers (FTELMarket)'
+2026-11-07 16:16:34.713 +01:00 [INF] Route matched with {action = "SyncCustomers", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SyncCustomers() on controller FTELMarket.Controllers.ProductsController (FTELMarket).
+2026-11-07 16:16:34.730 +01:00 [INF] Début de la synchronisation des clients...
+2026-11-07 16:16:34.737 +01:00 [INF] Start processing HTTP request GET http://localhost:5000/api/customers
+2026-11-07 16:16:34.741 +01:00 [INF] Sending HTTP request GET http://localhost:5000/api/customers
+2026-11-07 16:16:38.810 +01:00 [INF] HTTP request failed after 4065.8186ms
+System.Net.Http.HttpRequestException: Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée. (localhost:5000)
+ ---> System.Net.Sockets.SocketException (10061): Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.InjectNewHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendCoreAsync>g__Core|4_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+2026-11-07 16:16:38.834 +01:00 [WRN] Execution attempt. Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: 'Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée. (localhost:5000)', Handled: 'true', Attempt: '0', Execution Time: 4092.7629ms
+System.Net.Http.HttpRequestException: Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée. (localhost:5000)
+ ---> System.Net.Sockets.SocketException (10061): Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.InjectNewHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendCoreAsync>g__Core|4_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Resilience.ResilienceHandler.<>c.<<SendAsync>b__3_0>d.MoveNext()
+2026-11-07 16:16:38.872 +01:00 [WRN] Resilience event occurred. EventName: 'OnRetry', Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: 'Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée. (localhost:5000)'
+System.Net.Http.HttpRequestException: Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée. (localhost:5000)
+ ---> System.Net.Sockets.SocketException (10061): Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.InjectNewHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendCoreAsync>g__Core|4_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Resilience.ResilienceHandler.<>c.<<SendAsync>b__3_0>d.MoveNext()
+2026-11-07 16:16:40.489 +01:00 [INF] Sending HTTP request GET http://localhost:5000/api/customers
+2026-11-07 16:16:44.573 +01:00 [INF] HTTP request failed after 4079.58ms
+System.Net.Http.HttpRequestException: Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée. (localhost:5000)
+ ---> System.Net.Sockets.SocketException (10061): Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.InjectNewHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendCoreAsync>g__Core|4_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+2026-11-07 16:16:44.589 +01:00 [WRN] Execution attempt. Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: 'Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée. (localhost:5000)', Handled: 'true', Attempt: '1', Execution Time: 4099.7317ms
+System.Net.Http.HttpRequestException: Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée. (localhost:5000)
+ ---> System.Net.Sockets.SocketException (10061): Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.InjectNewHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendCoreAsync>g__Core|4_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Resilience.ResilienceHandler.<>c.<<SendAsync>b__3_0>d.MoveNext()
+2026-11-07 16:16:44.614 +01:00 [WRN] Resilience event occurred. EventName: 'OnRetry', Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: 'Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée. (localhost:5000)'
+System.Net.Http.HttpRequestException: Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée. (localhost:5000)
+ ---> System.Net.Sockets.SocketException (10061): Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.InjectNewHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendCoreAsync>g__Core|4_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Resilience.ResilienceHandler.<>c.<<SendAsync>b__3_0>d.MoveNext()
+2026-11-07 16:16:48.518 +01:00 [INF] Sending HTTP request GET http://localhost:5000/api/customers
+2026-11-07 16:16:52.616 +01:00 [INF] HTTP request failed after 4093.2221ms
+System.Net.Http.HttpRequestException: Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée. (localhost:5000)
+ ---> System.Net.Sockets.SocketException (10061): Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.InjectNewHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendCoreAsync>g__Core|4_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+2026-11-07 16:16:52.632 +01:00 [WRN] Execution attempt. Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: 'Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée. (localhost:5000)', Handled: 'true', Attempt: '2', Execution Time: 4113.6972ms
+System.Net.Http.HttpRequestException: Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée. (localhost:5000)
+ ---> System.Net.Sockets.SocketException (10061): Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.InjectNewHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendCoreAsync>g__Core|4_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Resilience.ResilienceHandler.<>c.<<SendAsync>b__3_0>d.MoveNext()
+2026-11-07 16:16:52.680 +01:00 [WRN] Resilience event occurred. EventName: 'OnRetry', Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: 'Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée. (localhost:5000)'
+System.Net.Http.HttpRequestException: Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée. (localhost:5000)
+ ---> System.Net.Sockets.SocketException (10061): Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.InjectNewHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendCoreAsync>g__Core|4_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Resilience.ResilienceHandler.<>c.<<SendAsync>b__3_0>d.MoveNext()
+2026-11-07 16:16:53.961 +01:00 [INF] Sending HTTP request GET http://localhost:5000/api/customers
+2026-11-07 16:16:58.045 +01:00 [INF] HTTP request failed after 4080.6941ms
+System.Net.Http.HttpRequestException: Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée. (localhost:5000)
+ ---> System.Net.Sockets.SocketException (10061): Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.InjectNewHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendCoreAsync>g__Core|4_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+2026-11-07 16:16:58.066 +01:00 [ERR] Execution attempt. Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: 'Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée. (localhost:5000)', Handled: 'true', Attempt: '3', Execution Time: 4104.8617ms
+System.Net.Http.HttpRequestException: Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée. (localhost:5000)
+ ---> System.Net.Sockets.SocketException (10061): Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.InjectNewHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendCoreAsync>g__Core|4_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Resilience.ResilienceHandler.<>c.<<SendAsync>b__3_0>d.MoveNext()
+2026-11-07 16:16:58.107 +01:00 [INF] HTTP request failed after 23370.1024ms
+System.Net.Http.HttpRequestException: Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée. (localhost:5000)
+ ---> System.Net.Sockets.SocketException (10061): Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.InjectNewHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendCoreAsync>g__Core|4_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Resilience.ResilienceHandler.<>c.<<SendAsync>b__3_0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Polly.Outcome`1.ThrowIfException()
+   at Microsoft.Extensions.Http.Resilience.ResilienceHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingScopeHttpMessageHandler.<SendCoreAsync>g__Core|4_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+2026-11-07 16:16:58.127 +01:00 [INF] Executed action FTELMarket.Controllers.ProductsController.SyncCustomers (FTELMarket) in 23403.52ms
+2026-11-07 16:16:58.134 +01:00 [INF] Executed endpoint 'FTELMarket.Controllers.ProductsController.SyncCustomers (FTELMarket)'
+2026-11-07 16:16:58.139 +01:00 [ERR] An unhandled exception has occurred while executing the request.
+System.Net.Http.HttpRequestException: Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée. (localhost:5000)
+ ---> System.Net.Sockets.SocketException (10061): Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.InjectNewHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendCoreAsync>g__Core|4_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Resilience.ResilienceHandler.<>c.<<SendAsync>b__3_0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Polly.Outcome`1.ThrowIfException()
+   at Microsoft.Extensions.Http.Resilience.ResilienceHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingScopeHttpMessageHandler.<SendCoreAsync>g__Core|4_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at FTELMarket.Services.FlakyService.SyncCustomersAsync(CancellationToken cancellationToken) in D:\M2 GIL\.Net\FTELMarket\FTELMarket\Services\FlakyService.cs:line 24
+   at FTELMarket.Controllers.ProductsController.SyncCustomers() in D:\M2 GIL\.Net\FTELMarket\FTELMarket\Controllers\ProductsController.cs:line 141
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2026-11-07 16:16:58.173 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5082/api/Products/sync/customers - 500 null text/plain; charset=utf-8 23502.7071ms
+2026-11-07 16:17:57.319 +01:00 [INF] Application is shutting down...
+2026-11-07 16:18:19.363 +01:00 [INF] Démarrage de FTELMarket Web API...
+2026-11-07 16:18:20.504 +01:00 [INF] Now listening on: http://localhost:5082
+2026-11-07 16:18:20.519 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-11-07 16:18:20.523 +01:00 [INF] Hosting environment: Development
+2026-11-07 16:18:20.528 +01:00 [INF] Content root path: D:\M2 GIL\.Net\FTELMarket\FTELMarket
+2026-11-07 16:18:20.798 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5082/swagger/index.html - null null
+2026-11-07 16:18:21.077 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5082/swagger/index.html - 304 null null 284.4391ms
+2026-11-07 16:18:21.106 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5082/swagger/index.css - null null
+2026-11-07 16:18:21.107 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5082/swagger/swagger-ui-bundle.js - null null
+2026-11-07 16:18:21.109 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5082/swagger/swagger-ui-standalone-preset.js - null null
+2026-11-07 16:18:21.110 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5082/swagger/index.js - null null
+2026-11-07 16:18:21.115 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5082/swagger/swagger-ui.css - null null
+2026-11-07 16:18:21.151 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5082/swagger/index.css - 304 null null 46.8631ms
+2026-11-07 16:18:21.154 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5082/swagger/swagger-ui-standalone-preset.js - 304 null null 45.2191ms
+2026-11-07 16:18:21.176 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5082/swagger/index.js - 304 null null 66ms
+2026-11-07 16:18:21.182 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5082/swagger/swagger-ui-bundle.js - 304 null null 75.508ms
+2026-11-07 16:18:21.197 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5082/swagger/swagger-ui.css - 304 null null 82.4234ms
+2026-11-07 16:18:21.349 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5082/swagger/v1/swagger.json - null null
+2026-11-07 16:18:21.366 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5082/swagger/favicon-32x32.png - null null
+2026-11-07 16:18:21.418 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5082/swagger/favicon-32x32.png - 304 null null 52.2863ms
+2026-11-07 16:18:21.718 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5082/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 368.6908ms
+2026-11-07 16:18:25.888 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5082/api/Products/sync/customers - null 0
+2026-11-07 16:18:25.932 +01:00 [INF] CORS policy execution failed.
+2026-11-07 16:18:26.045 +01:00 [INF] Request origin http://localhost:5082 does not have permission to access the resource.
+2026-11-07 16:18:26.115 +01:00 [INF] Executing endpoint 'FTELMarket.Controllers.ProductsController.SyncCustomers (FTELMarket)'
+2026-11-07 16:18:26.169 +01:00 [INF] Route matched with {action = "SyncCustomers", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SyncCustomers() on controller FTELMarket.Controllers.ProductsController (FTELMarket).
+2026-11-07 16:18:26.679 +01:00 [INF] Début de la synchronisation des clients...
+2026-11-07 16:18:26.693 +01:00 [INF] Start processing HTTP request GET http://localhost:8080/api/customers
+2026-11-07 16:18:26.805 +01:00 [INF] Sending HTTP request GET http://localhost:8080/api/customers
+2026-11-07 16:18:26.962 +01:00 [INF] Received HTTP response headers after 143.6036ms - 503
+2026-11-07 16:18:27.000 +01:00 [WRN] Execution attempt. Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '503', Handled: 'true', Attempt: '0', Execution Time: 213.5941ms
+2026-11-07 16:18:27.033 +01:00 [WRN] Resilience event occurred. EventName: 'OnRetry', Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '503'
+2026-11-07 16:18:28.169 +01:00 [INF] Sending HTTP request GET http://localhost:8080/api/customers
+2026-11-07 16:18:28.179 +01:00 [INF] Received HTTP response headers after 5.9565ms - 503
+2026-11-07 16:18:28.185 +01:00 [WRN] Execution attempt. Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '503', Handled: 'true', Attempt: '1', Execution Time: 16.1842ms
+2026-11-07 16:18:28.199 +01:00 [WRN] Resilience event occurred. EventName: 'OnRetry', Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '503'
+2026-11-07 16:18:32.405 +01:00 [INF] Sending HTTP request GET http://localhost:8080/api/customers
+2026-11-07 16:18:32.413 +01:00 [INF] Received HTTP response headers after 2.781ms - 500
+2026-11-07 16:18:32.418 +01:00 [WRN] Execution attempt. Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '500', Handled: 'true', Attempt: '2', Execution Time: 13.0029ms
+2026-11-07 16:18:32.432 +01:00 [WRN] Resilience event occurred. EventName: 'OnRetry', Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '500'
+2026-11-07 16:18:38.182 +01:00 [INF] Sending HTTP request GET http://localhost:8080/api/customers
+2026-11-07 16:18:38.193 +01:00 [INF] Received HTTP response headers after 5.2518ms - 200
+2026-11-07 16:18:38.200 +01:00 [INF] Execution attempt. Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '200', Handled: 'false', Attempt: '3', Execution Time: 17.8329ms
+2026-11-07 16:18:38.234 +01:00 [INF] End processing HTTP request after 11549.8047ms - 200
+2026-11-07 16:18:38.249 +01:00 [INF] Réponse API Customers ["OK"] : {"page":1,"pageSize":50,"total":500,"items":[{"id":"74737563-6d6f-7245-ad30-000000000000","firstName":"Nathan","lastName":"Laurent","email":"nathan.laurent0@example.com","city":"Toulouse"},{"id":"74737563-6d6f-7245-ad31-000000000000","firstName":"Maxime","lastName":"Bernard","email":"maxime.bernard1@example.com","city":"Lyon"},{"id":"74737563-6d6f-7245-ad32-000000000000","firstName":"Sarah","lastName":"Laurent","email":"sarah.laurent2@example.com","city":"Montpellier"},{"id":"74737563-6d6f-7245-ad33-000000000000","firstName":"Nathan","lastName":"Laurent","email":"nathan.laurent3@example.com","city":"Lyon"},{"id":"74737563-6d6f-7245-ad34-000000000000","firstName":"Nathan","lastName":"Dubois","email":"nathan.dubois4@example.com","city":"Lille"},{"id":"74737563-6d6f-7245-ad35-000000000000","firstName":"Chloé","lastName":"Dubois","email":"chloé.dubois5@example.com","city":"Marseille"},{"id":"74737563-6d6f-7245-ad36-000000000000","firstName":"Hugo","lastName":"Simon","email":"hugo.simon6@example.com","city":"Rennes"},{"id":"74737563-6d6f-7245-ad37-000000000000","firstName":"Hugo","lastName":"Laurent","email":"hugo.laurent7@example.com","city":"Montpellier"},{"id":"74737563-6d6f-7245-ad38-000000000000","firstName":"Lucas","lastName":"Moreau","email":"lucas.moreau8@example.com","city":"Rennes"},{"id":"74737563-6d6f-7245-ad39-000000000000","firstName":"Lucas","lastName":"Moreau","email":"lucas.moreau9@example.com","city":"Strasbourg"},{"id":"74737563-6d6f-7245-ad31-300000000000","firstName":"Maxime","lastName":"Bernard","email":"maxime.bernard10@example.com","city":"Bordeaux"},{"id":"74737563-6d6f-7245-ad31-310000000000","firstName":"Théo","lastName":"Simon","email":"théo.simon11@example.com","city":"Strasbourg"},{"id":"74737563-6d6f-7245-ad31-320000000000","firstName":"Maxime","lastName":"Robert","email":"maxime.robert12@example.com","city":"Nantes"},{"id":"74737563-6d6f-7245-ad31-330000000000","firstName":"Emma","lastName":"Thomas","email":"emma.thomas13@example.com","city":"Montpellier"},{"id":"74737563-6d6f-7245-ad31-340000000000","firstName":"Manon","lastName":"Laurent","email":"manon.laurent14@example.com","city":"Lille"},{"id":"74737563-6d6f-7245-ad31-350000000000","firstName":"Maxime","lastName":"Simon","email":"maxime.simon15@example.com","city":"Nantes"},{"id":"74737563-6d6f-7245-ad31-360000000000","firstName":"Manon","lastName":"Dubois","email":"manon.dubois16@example.com","city":"Rennes"},{"id":"74737563-6d6f-7245-ad31-370000000000","firstName":"Antoine","lastName":"Simon","email":"antoine.simon17@example.com","city":"Montpellier"},{"id":"74737563-6d6f-7245-ad31-380000000000","firstName":"Théo","lastName":"Bernard","email":"théo.bernard18@example.com","city":"Marseille"},{"id":"74737563-6d6f-7245-ad31-390000000000","firstName":"Théo","lastName":"Durand","email":"théo.durand19@example.com","city":"Bordeaux"},{"id":"74737563-6d6f-7245-ad32-300000000000","firstName":"Emma","lastName":"Simon","email":"emma.simon20@example.com","city":"Toulouse"},{"id":"74737563-6d6f-7245-ad32-310000000000","firstName":"Hugo","lastName":"Simon","email":"hugo.simon21@example.com","city":"Lyon"},{"id":"74737563-6d6f-7245-ad32-320000000000","firstName":"Lucas","lastName":"Leroy","email":"lucas.leroy22@example.com","city":"Toulouse"},{"id":"74737563-6d6f-7245-ad32-330000000000","firstName":"Maxime","lastName":"Garcia","email":"maxime.garcia23@example.com","city":"Toulouse"},{"id":"74737563-6d6f-7245-ad32-340000000000","firstName":"Nathan","lastName":"Martin","email":"nathan.martin24@example.com","city":"Marseille"},{"id":"74737563-6d6f-7245-ad32-350000000000","firstName":"Manon","lastName":"Leroy","email":"manon.leroy25@example.com","city":"Montpellier"},{"id":"74737563-6d6f-7245-ad32-360000000000","firstName":"Chloé","lastName":"Petit","email":"chloé.petit26@example.com","city":"Rennes"},{"id":"74737563-6d6f-7245-ad32-370000000000","firstName":"Léa","lastName":"Robert","email":"léa.robert27@example.com","city":"Rennes"},{"id":"74737563-6d6f-7245-ad32-380000000000","firstName":"Maxime","lastName":"Leroy","email":"maxime.leroy28@example.com","city":"Strasbourg"},{"id":"74737563-6d6f-7245-ad32-390000000000","firstName":"Léa","lastName":"Martin","email":"léa.martin29@example.com","city":"Paris"},{"id":"74737563-6d6f-7245-ad33-300000000000","firstName":"Emma","lastName":"Laurent","email":"emma.laurent30@example.com","city":"Toulouse"},{"id":"74737563-6d6f-7245-ad33-310000000000","firstName":"Camille","lastName":"Martin","email":"camille.martin31@example.com","city":"Bordeaux"},{"id":"74737563-6d6f-7245-ad33-320000000000","firstName":"Sarah","lastName":"Robert","email":"sarah.robert32@example.com","city":"Paris"},{"id":"74737563-6d6f-7245-ad33-330000000000","firstName":"Hugo","lastName":"Durand","email":"hugo.durand33@example.com","city":"Paris"},{"id":"74737563-6d6f-7245-ad33-340000000000","firstName":"Manon","lastName":"Bernard","email":"manon.bernard34@example.com","city":"Strasbourg"},{"id":"74737563-6d6f-7245-ad33-350000000000","firstName":"Chloé","lastName":"Durand","email":"chloé.durand35@example.com","city":"Lille"},{"id":"74737563-6d6f-7245-ad33-360000000000","firstName":"Maxime","lastName":"Martin","email":"maxime.martin36@example.com","city":"Lyon"},{"id":"74737563-6d6f-7245-ad33-370000000000","firstName":"Camille","lastName":"Dubois","email":"camille.dubois37@example.com","city":"Strasbourg"},{"id":"74737563-6d6f-7245-ad33-380000000000","firstName":"Chloé","lastName":"Simon","email":"chloé.simon38@example.com","city":"Lyon"},{"id":"74737563-6d6f-7245-ad33-390000000000","firstName":"Chloé","lastName":"Leroy","email":"chloé.leroy39@example.com","city":"Paris"},{"id":"74737563-6d6f-7245-ad34-300000000000","firstName":"Nathan","lastName":"Moreau","email":"nathan.moreau40@example.com","city":"Rennes"},{"id":"74737563-6d6f-7245-ad34-310000000000","firstName":"Théo","lastName":"Robert","email":"théo.robert41@example.com","city":"Toulouse"},{"id":"74737563-6d6f-7245-ad34-320000000000","firstName":"Antoine","lastName":"Petit","email":"antoine.petit42@example.com","city":"Paris"},{"id":"74737563-6d6f-7245-ad34-330000000000","firstName":"Antoine","lastName":"Simon","email":"antoine.simon43@example.com","city":"Lille"},{"id":"74737563-6d6f-7245-ad34-340000000000","firstName":"Sarah","lastName":"Thomas","email":"sarah.thomas44@example.com","city":"Toulouse"},{"id":"74737563-6d6f-7245-ad34-350000000000","firstName":"Manon","lastName":"Moreau","email":"manon.moreau45@example.com","city":"Lyon"},{"id":"74737563-6d6f-7245-ad34-360000000000","firstName":"Léa","lastName":"Martin","email":"léa.martin46@example.com","city":"Lyon"},{"id":"74737563-6d6f-7245-ad34-370000000000","firstName":"Maxime","lastName":"Simon","email":"maxime.simon47@example.com","city":"Marseille"},{"id":"74737563-6d6f-7245-ad34-380000000000","firstName":"Emma","lastName":"Bernard","email":"emma.bernard48@example.com","city":"Marseille"},{"id":"74737563-6d6f-7245-ad34-390000000000","firstName":"Manon","lastName":"Durand","email":"manon.durand49@example.com","city":"Rennes"}]}
+2026-11-07 16:18:38.311 +01:00 [INF] Executed action FTELMarket.Controllers.ProductsController.SyncCustomers (FTELMarket) in 12126.4507ms
+2026-11-07 16:18:38.316 +01:00 [INF] Executed endpoint 'FTELMarket.Controllers.ProductsController.SyncCustomers (FTELMarket)'
+2026-11-07 16:18:38.326 +01:00 [ERR] An unhandled exception has occurred while executing the request.
+System.Text.Json.JsonException: The JSON value could not be converted to System.Collections.Generic.List`1[FTELMarket.Models.ExternalCustomerDto]. Path: $ | LineNumber: 0 | BytePositionInLine: 1.
+   at System.Text.Json.ThrowHelper.ThrowJsonException_DeserializeUnableToConvertValue(Type propertyType)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, TCollection& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value, Boolean& isPopulatedValue)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, T& value, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.Deserialize(Utf8JsonReader& reader, ReadStack& state)
+   at System.Text.Json.JsonSerializer.ReadFromSpan[TValue](ReadOnlySpan`1 utf8Json, JsonTypeInfo`1 jsonTypeInfo, Nullable`1 actualByteCount)
+   at System.Text.Json.JsonSerializer.ReadFromSpan[TValue](ReadOnlySpan`1 json, JsonTypeInfo`1 jsonTypeInfo)
+   at System.Text.Json.JsonSerializer.Deserialize[TValue](String json, JsonSerializerOptions options)
+   at FTELMarket.Services.FlakyService.SyncCustomersAsync(CancellationToken cancellationToken) in D:\M2 GIL\.Net\FTELMarket\FTELMarket\Services\FlakyService.cs:line 33
+   at FTELMarket.Controllers.ProductsController.SyncCustomers() in D:\M2 GIL\.Net\FTELMarket\FTELMarket\Controllers\ProductsController.cs:line 141
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2026-11-07 16:18:38.393 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5082/api/Products/sync/customers - 500 null text/plain; charset=utf-8 12504.7376ms
+2026-11-07 16:25:53.315 +01:00 [INF] Application is shutting down...
+2026-11-07 16:26:39.565 +01:00 [INF] Démarrage de FTELMarket Web API...
+2026-11-07 16:26:40.931 +01:00 [INF] Now listening on: http://localhost:5082
+2026-11-07 16:26:40.952 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-11-07 16:26:40.964 +01:00 [INF] Hosting environment: Development
+2026-11-07 16:26:40.972 +01:00 [INF] Content root path: D:\M2 GIL\.Net\FTELMarket\FTELMarket
+2026-11-07 16:26:48.021 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5082/swagger/index.html - null null
+2026-11-07 16:26:48.389 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5082/swagger/index.html - 200 null text/html;charset=utf-8 375.7018ms
+2026-11-07 16:26:48.418 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5082/swagger/swagger-ui-bundle.js - null null
+2026-11-07 16:26:48.418 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5082/swagger/index.css - null null
+2026-11-07 16:26:48.419 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5082/swagger/swagger-ui-standalone-preset.js - null null
+2026-11-07 16:26:48.423 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5082/swagger/index.js - null null
+2026-11-07 16:26:48.427 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5082/swagger/swagger-ui.css - null null
+2026-11-07 16:26:48.494 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5082/swagger/index.css - 304 null null 82.4036ms
+2026-11-07 16:26:48.494 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5082/swagger/swagger-ui-standalone-preset.js - 304 null null 74.3652ms
+2026-11-07 16:26:48.494 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5082/swagger/index.js - 304 null null 71.2338ms
+2026-11-07 16:26:48.535 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5082/swagger/swagger-ui-bundle.js - 304 null null 118.0872ms
+2026-11-07 16:26:48.542 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5082/swagger/swagger-ui.css - 304 null null 115.6409ms
+2026-11-07 16:26:49.127 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5082/swagger/v1/swagger.json - null null
+2026-11-07 16:26:49.213 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5082/swagger/favicon-32x32.png - null null
+2026-11-07 16:26:49.487 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5082/swagger/favicon-32x32.png - 304 null null 274.2428ms
+2026-11-07 16:26:49.692 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5082/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 564.798ms
+2026-11-07 16:26:53.587 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5082/api/Products/sync/customers - null 0
+2026-11-07 16:26:53.619 +01:00 [INF] CORS policy execution failed.
+2026-11-07 16:26:53.626 +01:00 [INF] Request origin http://localhost:5082 does not have permission to access the resource.
+2026-11-07 16:26:53.646 +01:00 [INF] Executing endpoint 'FTELMarket.Controllers.ProductsController.SyncCustomers (FTELMarket)'
+2026-11-07 16:26:53.707 +01:00 [INF] Route matched with {action = "SyncCustomers", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SyncCustomers() on controller FTELMarket.Controllers.ProductsController (FTELMarket).
+2026-11-07 16:26:54.301 +01:00 [INF] Début de la synchronisation des clients...
+2026-11-07 16:26:54.318 +01:00 [INF] Start processing HTTP request GET http://localhost:8080/api/customers
+2026-11-07 16:26:54.456 +01:00 [INF] Sending HTTP request GET http://localhost:8080/api/customers
+2026-11-07 16:26:54.639 +01:00 [INF] Received HTTP response headers after 167.8963ms - 200
+2026-11-07 16:26:54.688 +01:00 [INF] Execution attempt. Source: 'FlakyService-standard//Standard-Retry', Operation Key: 'null', Result: '200', Handled: 'false', Attempt: '0', Execution Time: 244.0245ms
+2026-11-07 16:26:54.727 +01:00 [INF] End processing HTTP request after 417.6046ms - 200
+2026-11-07 16:26:54.744 +01:00 [INF] JSON reçu pour les clients : {"page":1,"pageSize":50,"total":500,"items":[{"id":"74737563-6d6f-7245-ad30-000000000000","firstName":"Nathan","lastName":"Laurent","email":"nathan.laurent0@example.com","city":"Toulouse"},{"id":"74737563-6d6f-7245-ad31-000000000000","firstName":"Maxime","lastName":"Bernard","email":"maxime.bernard1@example.com","city":"Bordeaux"},{"id":"74737563-6d6f-7245-ad32-000000000000","firstName":"Sarah","lastName":"Laurent","email":"sarah.laurent2@example.com","city":"Montpellier"},{"id":"74737563-6d6f-7245-ad33-000000000000","firstName":"Nathan","lastName":"Laurent","email":"nathan.laurent3@example.com","city":"Lyon"},{"id":"74737563-6d6f-7245-ad34-000000000000","firstName":"Nathan","lastName":"Dubois","email":"nathan.dubois4@example.com","city":"Lille"},{"id":"74737563-6d6f-7245-ad35-000000000000","firstName":"Chloé","lastName":"Dubois","email":"chloé.dubois5@example.com","city":"Toulouse"},{"id":"74737563-6d6f-7245-ad36-000000000000","firstName":"Hugo","lastName":"Simon","email":"hugo.simon6@example.com","city":"Rennes"},{"id":"74737563-6d6f-7245-ad37-000000000000","firstName":"Hugo","lastName":"Laurent","email":"hugo.laurent7@example.com","city":"Nantes"},{"id":"74737563-6d6f-7245-ad38-000000000000","firstName":"Lucas","lastName":"Moreau","email":"lucas.moreau8@example.com","city":"Rennes"},{"id":"74737563-6d6f-7245-ad39-000000000000","firstName":"Lucas","lastName":"Moreau","email":"lucas.moreau9@example.com","city":"Strasbourg"},{"id":"74737563-6d6f-7245-ad31-300000000000","firstName":"Maxime","lastName":"Bernard","email":"maxime.bernard10@example.com","city":"Bordeaux"},{"id":"74737563-6d6f-7245-ad31-310000000000","firstName":"Théo","lastName":"Simon","email":"théo.simon11@example.com","city":"Lille"},{"id":"74737563-6d6f-7245-ad31-320000000000","firstName":"Maxime","lastName":"Robert","email":"maxime.robert12@example.com","city":"Nantes"},{"id":"74737563-6d6f-7245-ad31-330000000000","firstName":"Emma","lastName":"Thomas","email":"emma.thomas13@example.com","city":"Lyon"},{"id":"74737563-6d6f-7245-ad31-340000000000","firstName":"Manon","lastName":"Laurent","email":"manon.laurent14@example.com","city":"Lille"},{"id":"74737563-6d6f-7245-ad31-350000000000","firstName":"Maxime","lastName":"Simon","email":"maxime.simon15@example.com","city":"Nantes"},{"id":"74737563-6d6f-7245-ad31-360000000000","firstName":"Manon","lastName":"Dubois","email":"manon.dubois16@example.com","city":"Rennes"},{"id":"74737563-6d6f-7245-ad31-370000000000","firstName":"Antoine","lastName":"Simon","email":"antoine.simon17@example.com","city":"Montpellier"},{"id":"74737563-6d6f-7245-ad31-380000000000","firstName":"Théo","lastName":"Bernard","email":"théo.bernard18@example.com","city":"Toulouse"},{"id":"74737563-6d6f-7245-ad31-390000000000","firstName":"Théo","lastName":"Durand","email":"théo.durand19@example.com","city":"Bordeaux"},{"id":"74737563-6d6f-7245-ad32-300000000000","firstName":"Emma","lastName":"Simon","email":"emma.simon20@example.com","city":"Toulouse"},{"id":"74737563-6d6f-7245-ad32-310000000000","firstName":"Hugo","lastName":"Simon","email":"hugo.simon21@example.com","city":"Lyon"},{"id":"74737563-6d6f-7245-ad32-320000000000","firstName":"Lucas","lastName":"Leroy","email":"lucas.leroy22@example.com","city":"Toulouse"},{"id":"74737563-6d6f-7245-ad32-330000000000","firstName":"Maxime","lastName":"Garcia","email":"maxime.garcia23@example.com","city":"Toulouse"},{"id":"74737563-6d6f-7245-ad32-340000000000","firstName":"Nathan","lastName":"Martin","email":"nathan.martin24@example.com","city":"Marseille"},{"id":"74737563-6d6f-7245-ad32-350000000000","firstName":"Manon","lastName":"Leroy","email":"manon.leroy25@example.com","city":"Montpellier"},{"id":"74737563-6d6f-7245-ad32-360000000000","firstName":"Chloé","lastName":"Petit","email":"chloé.petit26@example.com","city":"Rennes"},{"id":"74737563-6d6f-7245-ad32-370000000000","firstName":"Léa","lastName":"Robert","email":"léa.robert27@example.com","city":"Rennes"},{"id":"74737563-6d6f-7245-ad32-380000000000","firstName":"Maxime","lastName":"Leroy","email":"maxime.leroy28@example.com","city":"Strasbourg"},{"id":"74737563-6d6f-7245-ad32-390000000000","firstName":"Léa","lastName":"Martin","email":"léa.martin29@example.com","city":"Lyon"},{"id":"74737563-6d6f-7245-ad33-300000000000","firstName":"Emma","lastName":"Laurent","email":"emma.laurent30@example.com","city":"Toulouse"},{"id":"74737563-6d6f-7245-ad33-310000000000","firstName":"Camille","lastName":"Martin","email":"camille.martin31@example.com","city":"Bordeaux"},{"id":"74737563-6d6f-7245-ad33-320000000000","firstName":"Sarah","lastName":"Robert","email":"sarah.robert32@example.com","city":"Paris"},{"id":"74737563-6d6f-7245-ad33-330000000000","firstName":"Hugo","lastName":"Durand","email":"hugo.durand33@example.com","city":"Paris"},{"id":"74737563-6d6f-7245-ad33-340000000000","firstName":"Manon","lastName":"Bernard","email":"manon.bernard34@example.com","city":"Strasbourg"},{"id":"74737563-6d6f-7245-ad33-350000000000","firstName":"Chloé","lastName":"Durand","email":"chloé.durand35@example.com","city":"Lille"},{"id":"74737563-6d6f-7245-ad33-360000000000","firstName":"Maxime","lastName":"Martin","email":"maxime.martin36@example.com","city":"Lyon"},{"id":"74737563-6d6f-7245-ad33-370000000000","firstName":"Camille","lastName":"Dubois","email":"camille.dubois37@example.com","city":"Strasbourg"},{"id":"74737563-6d6f-7245-ad33-380000000000","firstName":"Chloé","lastName":"Simon","email":"chloé.simon38@example.com","city":"Lyon"},{"id":"74737563-6d6f-7245-ad33-390000000000","firstName":"Chloé","lastName":"Leroy","email":"chloé.leroy39@example.com","city":"Paris"},{"id":"74737563-6d6f-7245-ad34-300000000000","firstName":"Nathan","lastName":"Moreau","email":"nathan.moreau40@example.com","city":"Rennes"},{"id":"74737563-6d6f-7245-ad34-310000000000","firstName":"Théo","lastName":"Robert","email":"théo.robert41@example.com","city":"Toulouse"},{"id":"74737563-6d6f-7245-ad34-320000000000","firstName":"Antoine","lastName":"Petit","email":"antoine.petit42@example.com","city":"Bordeaux"},{"id":"74737563-6d6f-7245-ad34-330000000000","firstName":"Antoine","lastName":"Simon","email":"antoine.simon43@example.com","city":"Lille"},{"id":"74737563-6d6f-7245-ad34-340000000000","firstName":"Sarah","lastName":"Thomas","email":"sarah.thomas44@example.com","city":"Toulouse"},{"id":"74737563-6d6f-7245-ad34-350000000000","firstName":"Manon","lastName":"Moreau","email":"manon.moreau45@example.com","city":"Lyon"},{"id":"74737563-6d6f-7245-ad34-360000000000","firstName":"Léa","lastName":"Martin","email":"léa.martin46@example.com","city":"Lyon"},{"id":"74737563-6d6f-7245-ad34-370000000000","firstName":"Maxime","lastName":"Simon","email":"maxime.simon47@example.com","city":"Marseille"},{"id":"74737563-6d6f-7245-ad34-380000000000","firstName":"Emma","lastName":"Bernard","email":"emma.bernard48@example.com","city":"Marseille"},{"id":"74737563-6d6f-7245-ad34-390000000000","firstName":"Manon","lastName":"Durand","email":"manon.durand49@example.com","city":"Rennes"}]}
+2026-11-07 16:26:58.278 +01:00 [ERR] Failed executing DbCommand (82ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT c."Id", c."Email", c."IsActive", c."Name"
+FROM "Customers" AS c
+2026-11-07 16:26:58.368 +01:00 [ERR] An exception occurred while iterating over the results of a query for context type 'FTELMarket.Infrastructure.FtelMarketDbContext'.
+Npgsql.PostgresException (0x80004005): 42P01: relation "Customers" does not exist
+
+POSITION: 56
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+  Exception data:
+    Severity: ERROR
+    SqlState: 42P01
+    MessageText: relation "Customers" does not exist
+    Position: 56
+    File: parse_relation.c
+    Line: 1498
+    Routine: parserOpenTable
+Npgsql.PostgresException (0x80004005): 42P01: relation "Customers" does not exist
+
+POSITION: 56
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+  Exception data:
+    Severity: ERROR
+    SqlState: 42P01
+    MessageText: relation "Customers" does not exist
+    Position: 56
+    File: parse_relation.c
+    Line: 1498
+    Routine: parserOpenTable
+2026-11-07 16:26:58.418 +01:00 [INF] Executed action FTELMarket.Controllers.ProductsController.SyncCustomers (FTELMarket) in 4689.1831ms
+2026-11-07 16:26:58.434 +01:00 [INF] Executed endpoint 'FTELMarket.Controllers.ProductsController.SyncCustomers (FTELMarket)'
+2026-11-07 16:26:58.451 +01:00 [ERR] An unhandled exception has occurred while executing the request.
+Npgsql.PostgresException (0x80004005): 42P01: relation "Customers" does not exist
+
+POSITION: 56
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at FTELMarket.Services.FlakyService.SyncCustomersAsync(CancellationToken cancellationToken) in D:\M2 GIL\.Net\FTELMarket\FTELMarket\Services\FlakyService.cs:line 34
+   at FTELMarket.Controllers.ProductsController.SyncCustomers() in D:\M2 GIL\.Net\FTELMarket\FTELMarket\Controllers\ProductsController.cs:line 141
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+  Exception data:
+    Severity: ERROR
+    SqlState: 42P01
+    MessageText: relation "Customers" does not exist
+    Position: 56
+    File: parse_relation.c
+    Line: 1498
+    Routine: parserOpenTable
+2026-11-07 16:26:58.567 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5082/api/Products/sync/customers - 500 null text/plain; charset=utf-8 4979.8501ms
+2026-11-07 16:36:51.625 +01:00 [INF] Application is shutting down...
