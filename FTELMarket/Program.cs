@@ -2,7 +2,9 @@ namespace FTELMarket;
 
 using FTELMarket.Infrastructure;
 using Microsoft.EntityFrameworkCore;
-
+using FTELMarket.Settings;
+using FTELMarket.Services;
+using Microsoft.Extensions.Options;
 public class Program
 {
     public static void Main(string[] args)
@@ -26,7 +28,30 @@ public class Program
         });
 
         builder.Services.AddOpenApi();
+        builder.Services.AddOptions<FlakySettings>()
+            .BindConfiguration(nameof(FlakySettings))
+            .ValidateDataAnnotations()
+            .ValidateOnStart();
 
+        // 1. Liaison et validation des options FlakySettings
+        builder.Services.AddOptions<FlakySettings>()
+            .BindConfiguration("FlakySettings")
+            .ValidateDataAnnotations()
+            .ValidateOnStart();
+
+        // 2. Client typé (Typed Client) pour FlakyService
+        builder.Services.AddHttpClient<FlakyService>((sp, client) =>
+        {
+            var settings = sp.GetRequiredService<IOptions<FlakySettings>>().Value;
+            client.BaseAddress = new Uri(settings.BaseAddress);
+        });
+
+        // 3. Client nommé (Named Client "Flaky")
+        builder.Services.AddHttpClient("Flaky", (sp, client) =>
+        {
+            var settings = sp.GetRequiredService<IOptions<FlakySettings>>().Value;
+            client.BaseAddress = new Uri(settings.BaseAddress);
+        });
         var app = builder.Build();
 
         if (app.Environment.IsDevelopment())
